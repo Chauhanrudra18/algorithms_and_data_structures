@@ -1,13 +1,13 @@
 #include <iostream>
-#include <stack.h>
+#include <stack>
 
 int main()
 {
-    algo::Stack<double> st{10};
+    std::stack<double> st;
     for ( int i = 0; i < 10; ++i) {
         st.push( i );
     }
-    st.print();
+    // st.print(); // std::stack does not have a print method
     while (!st.empty()) {
         std::cout << st.top() << " ";
         st.pop();
